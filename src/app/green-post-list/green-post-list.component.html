@@ -1,0 +1,14 @@
+<div class="card" *ngFor="let post of greenPosts">
+    <div class="card-body">
+      <h5 class="card-title">ID: {{ post.id }}</h5>
+      <p class="card-text">Description: {{ post.desc }}</p>
+      <p class="card-text">Profile: {{ post.profile }}</p>
+      <p class="card-text">
+        Colors:
+        <span *ngFor="let color of post.colors; let last = last">
+          {{ color }}<span *ngIf="!last">, </span>
+        </span>
+      </p>
+    </div>
+  </div>
+  
