@@ -9,5 +9,5 @@ import { GreenPostListComponent } from './green-post-list/green-post-list.compon
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'green_world_frontend';
+  title = 'Green World Inventory';
 }
