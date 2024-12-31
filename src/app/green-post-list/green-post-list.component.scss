@@ -1,0 +1,18 @@
+.card {
+    width: 400px; 
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: powderblue; 
+    display: block; /* Changed from inline-block to block */
+  }
+  
+.card .card-title {
+    font-size: 1rem; 
+}
+  
+.card .card-text {
+    font-size: 0.875rem; 
+}
