@@ -1,11 +1,11 @@
 .card {
-    width: 400px; 
+    width: 600px; 
     border: 1px solid #ddd;
     border-radius: 5px;
     margin: 10px;
     padding: 10px; 
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    background-color: powderblue; 
+    background-color: #fadbd8; 
     display: block; /* Changed from inline-block to block */
   }
   
@@ -16,3 +16,8 @@
 .card .card-text {
     font-size: 0.875rem; 
 }
+
+.custom-container {
+    background-color: #d1f2eb;
+}
+  
