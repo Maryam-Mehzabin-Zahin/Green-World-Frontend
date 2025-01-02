@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { GreenPost } from '../green-post';
 import { GreenPostService } from '../green-post.service';
 import { CommonModule } from '@angular/common';
@@ -12,6 +12,8 @@ import { HttpClientModule } from '@angular/common/http';
 })
 export class GreenPostListComponent {
   greenPosts: GreenPost[] = [];
+  searchText = signal('');
+
   constructor(private service: GreenPostService) {
 
   }
@@ -24,4 +26,25 @@ export class GreenPostListComponent {
         this.greenPosts = data;
     });
   }
+
+  onSearch(event: Event): void {
+    const inputElement = event.target as HTMLInputElement;
+    this.searchText.set(inputElement.value);
+  }
+
+  onSearchSubmit(): void {
+    console.log('Search Submitted:', this.searchText());
+  }
+  // searchPosts() {
+  //   if (this.searchText.trim() === '') {
+  //     this.getAllPosts();
+  //   } else {
+  //     this.service.searchGreenPosts(this.searchText).subscribe({
+  //       next: (data: GreenPost[]) => {
+  //         this.greenPosts = data;
+  //       },
+  //       error: (error) => console.error('Error searching posts:', error)
+  //     });
+  //   }
+  // }
 }

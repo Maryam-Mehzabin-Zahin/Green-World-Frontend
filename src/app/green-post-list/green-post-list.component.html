@@ -1,10 +1,15 @@
 <div class="container custom-container p-4 min-vh-100 d-flex flex-column align-items-center">
     <div class="w-100" style="max-width: 600px;">
-      <input 
-        type="text" 
-        placeholder="Search posts..." 
-        class="form-control mb-4"
-      />
+        <form class="w-100 mb-4 d-flex gap-2" style="max-width: 600px;" (submit)="onSearchSubmit()">
+            <input 
+              type="text" 
+              placeholder="Search posts..."
+              class="form-control"
+              [value]="searchText()" 
+              (input)="onSearch($event)"
+            />
+            <button type="submit" class="btn btn-primary">Search</button>
+          </form>
     </div>
   
     <div *ngFor="let post of greenPosts">
