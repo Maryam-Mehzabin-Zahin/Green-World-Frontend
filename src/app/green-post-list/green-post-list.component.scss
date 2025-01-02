@@ -21,3 +21,16 @@
     background-color: #d1f2eb;
 }
   
+form {
+    display: flex;
+    gap: 10px;
+  
+    input {
+      flex: 1;
+    }
+  
+    button {
+      white-space: nowrap;
+    }
+  }
+  

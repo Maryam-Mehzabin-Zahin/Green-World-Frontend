@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class GreenPostService {
 
-  private baseUrl =  "http://localhost:8080/allPosts";
+  private baseUrl =  "http://localhost:8080/posts";
 
   constructor(
     private httpClient: HttpClient
@@ -16,5 +16,9 @@ export class GreenPostService {
 
   getGreenPostList(): Observable<GreenPost[]> {
     return this.httpClient.get<GreenPost[]>(`${this.baseUrl}`);
+  }
+
+  searchGreenPosts(text: string): Observable<GreenPost[]> {
+    return this.httpClient.get<GreenPost[]>(`${this.baseUrl}/${text}`);
   }
 }
